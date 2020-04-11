@@ -82,26 +82,23 @@ The above copyright notice and this permission notice shall be included in all c
               <div class=col-xs-4>
                 <input type="text" class="form-control" id="ex3" name="name" placeholder="Name">
               </div>
-            </div>
-            <div class="form-group">
-              <input type="number" class="form-control" name="age" id="age" placeholder="Age">
-            </div>
-            <div class="form-group">
-              <input type="text" class="form-control" name="username" id="username" placeholder="Username">
-            </div>
-            
-            <div class="form-group">
-              <input type="password" class="form-control" name="pass" id="password" placeholder="Password">
-            </div>
-        </div>
-        <div class="text-center">
-              <button type="submit" class="btn btn-primary btn-round btn-lg" onclick="location.href='loginsuccess.html'">Login</button>
-           
-        </div>
+              <br>
+              <div class=col-xs-4>
+                <input type="number" class="form-control" id="ex3" name="age" placeholder="Age">
+              </div>
+              <br>
+              <div class=col-xs-4>
+                <input type="text" class="form-control" id="ex3" name="username" placeholder="Username">
+              </div>
+              <br>
+              <div class="form-group">
+                <input type="password" class="form-control" name="pass" id="password" placeholder="Password">
+              </div>
+          </div>
         <br>
         <div class="text-center">
+              <button type="submit" class="btn btn-primary btn-round btn-lg" onclick="location.href='loginsuccess.html'">Register</button>
             
-              <button type="button" class="btn btn-primary btn-round btn-lg" onclick="location.href='register.html'">Register</button>
            
         </div>
           </form>

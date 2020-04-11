@@ -1,6 +1,8 @@
 <?php
+session_start();
 include_once('connection.php');
-$query="select * from notes";
+$var=$_SESSION["username"];
+$query="select * from notes where username='{$var}' and status='Active'";
 $result=mysqli_query($con,$query);
 ?>
 <!DOCTYPE html>
@@ -75,6 +77,10 @@ $result=mysqli_query($con,$query);
         <div class="title">
           <h1><strong>Notes</strong></h1>
           <h3><strong>View your Notes here</strong></h3>
+          <br>
+          <a href="viewdnotes.php" class="btn btn-twitter-bg btn-lg twitter-sharrre " rel="tooltip">
+              View Deleted Notes
+            </a>
         </div>
     	</div>
 	</div>
@@ -86,7 +92,7 @@ $result=mysqli_query($con,$query);
 							<tr class="table100-head">
 								<th class="column1 text-center">ID</th>
 						    <th class="column2 text-center">Notes</th>
-								<th class="column3 text-center">Username</th>
+								
 								
 							</tr>
 						</thead>
@@ -98,7 +104,7 @@ $result=mysqli_query($con,$query);
 		<tr>
 			<td class="column1 text-center" style="font-weight:bold"><?php echo $rows['id'];  ?> </td>
 			<td class="column2 text-center" style="font-weight:bold"><?php echo $rows['note']; ?> </td>
-			<td class="column3 text-center" style="font-weight:bold"><?php echo $rows['username']; ?> </td>
+			
 		</tr>
 	</div>
 	<?php
@@ -110,6 +116,9 @@ $result=mysqli_query($con,$query);
           <div class="text-center col-md-12 col-lg-8">
           	<a href="home1.html" class="btn btn-twitter-bg btn-lg twitter-sharrre btn-round" rel="tooltip" title="Tweet!">
               Back
+            </a>
+            <a href="deleteNotes.php" class="btn btn-twitter-bg btn-lg twitter-sharrre btn-round" rel="tooltip" title="Tweet!">
+              Delete Notes
             </a>
             <a href="addnotes.php" class="btn btn-twitter-bg btn-lg twitter-sharrre btn-round" rel="tooltip" title="Tweet!">
               Add Notes

@@ -56,10 +56,10 @@ The above copyright notice and this permission notice shall be included in all c
         <ul class="navbar-nav">
           
           <li class="nav-item">
-            <a href="home1.html" class="nav-link"> Home</a>
+            <a href="home1.html" target="_blank" class="nav-link"> Home</a>
           </li>
           <li class="nav-item">
-            <a href="logout.html" class="nav-link"> Logout</a>
+            <a href="logout.html" target="_blank" class="nav-link"> Logout</a>
           </li>
         </ul>
       </div>
@@ -70,17 +70,31 @@ The above copyright notice and this permission notice shall be included in all c
     <div class="section section-buttons text-center">
       <div class="container">
         <div class="title">
-          <h1><strong>Login Successful</strong></h1>
+          <h1><strong>Goals</strong></h1>
         </div>
-        
-       
-        <br><br>
-      
+        <div class="title">
+          <h3><b>Complete a goal</b></h3>
+        </div>
+        <form action="completeG.php" method="post">
         <div class="text-center">
-            
-              <button type="button" class="btn btn-primary btn-round btn-lg" onclick="location.href='home1.html'">Proceed</button>
+            <br><br>
+            <div class="form-group">
+              <div class=col-xs-4>
+                <input type="number" class="form-control" id="ex3" name="id" placeholder="Goal ID">
+              </div><br>
+              
+            </div>
+        </div>
+       
+    
+  
+        <div class="text-center">
+              <button type="submit" value="insert" class="btn btn-primary btn-round btn-lg" onclick="location.href='loginsuccess.html'">Complete</button>
            
         </div>
+        </form>
+        <br>
+        
           
       </div>
     </div>

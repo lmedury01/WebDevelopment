@@ -1,5 +1,7 @@
 <?php
+session_start();
 include_once('connection.php');
+$var=$_SESSION["username"];
 $query="select * from books";
 $result=mysqli_query($con,$query);
 ?>
@@ -75,6 +77,10 @@ $result=mysqli_query($con,$query);
         <div class="title">
           <h1><strong>Books</strong></h1>
           <h3><strong>View your Books here</strong></h3>
+          </h3><br>
+          <a href="viewdvd.php" class="btn btn-twitter-bg btn-lg twitter-sharrre " rel="tooltip">
+              View DVD's
+            </a>
         </div>
     	</div>
 	</div>
@@ -108,7 +114,7 @@ $result=mysqli_query($con,$query);
   <div class="row justify-content-md-center sharing-area text-center">
           
           <div class="text-center col-md-12 col-lg-8">
-          	<a href="viewcatalogue.html" class="btn btn-twitter-bg btn-lg twitter-sharrre btn-round" rel="tooltip" title="Tweet!">
+          	<a href="home1.html" class="btn btn-twitter-bg btn-lg twitter-sharrre btn-round" rel="tooltip" title="Tweet!">
               Back
             </a>
             <a href="addbooks.php" class="btn btn-twitter-bg btn-lg twitter-sharrre btn-round" rel="tooltip" title="Tweet!">

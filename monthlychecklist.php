@@ -1,5 +1,7 @@
 <?php
+session_start();
 include_once('connection.php');
+$var=$_SESSION["username"];
 $query="select * from mchecklist";
 $result=mysqli_query($con,$query);
 ?>
@@ -59,10 +61,10 @@ $result=mysqli_query($con,$query);
         <ul class="navbar-nav">
           
           <li class="nav-item">
-            <a href="home1.html" target="_blank" class="nav-link"> Home</a>
+            <a href="home1.html" class="nav-link"> Home</a>
           </li>
           <li class="nav-item">
-            <a href="logout.html" target="_blank" class="nav-link"> Logout</a>
+            <a href="logout.html" class="nav-link"> Logout</a>
           </li>
         </ul>
       </div>
@@ -74,7 +76,13 @@ $result=mysqli_query($con,$query);
       <div class="container">
         <div class="title">
           <h1><strong>Checklist</strong></h1>
-          <h3><strong>View your Monthly Activities here</strong></h3>
+          <h3><strong>View your Monthly Activities here</strong></h3><br>
+          <a href="dailychecklist.php" class="btn btn-twitter-bg btn-lg twitter-sharrre " rel="tooltip">
+              View Daily Checklist
+            </a> &nbsp; &nbsp;
+            <a href="monthlychecklist.php" class="btn btn-twitter-bg btn-lg twitter-sharrre " rel="tooltip">
+              View Weekly Checklist
+            </a> 
         </div>
     	</div>
 	</div>

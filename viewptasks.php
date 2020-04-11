@@ -2,7 +2,7 @@
 session_start();
 include_once('connection.php');
 $var=$_SESSION["username"];
-$query="select * from task where username='{$var}'";
+$query="select * from task where username='{$var}' and status='Pending'";
 $result=mysqli_query($con,$query);
 ?>
 <!DOCTYPE html>
@@ -97,7 +97,7 @@ $result=mysqli_query($con,$query);
 								<th class="column1 text-center">ID</th>
 								<th class="column2 text-center">Task</th>
 								<th class="column3 text-center">Deadline</th>
-                <th class="column3 text-center">Modify</th>
+                
 							</tr>
 						</thead>
 						
@@ -109,15 +109,7 @@ $result=mysqli_query($con,$query);
 			<td class="column1 text-center" style="font-weight:bold"><?php echo $rows['id'];  ?> </td>
 			<td class="column2 text-center" style="font-weight:bold"><?php echo $rows['note']; ?> </td>
 			<td class="column3 text-center" style="font-weight:bold"><?php echo $rows['deadline']; ?> </td>
-		  <td class="column4 text-center" style="font-weight:bold">
-        <div class="form-check">
-              <label class="form-check-label">
-                <input class="form-check-input" name=activity[] type="checkbox" value='{$row["id"]}'>
-                <span class="form-check-sign"></span>
-              </label>
-            </div>
-      </td>
-		</tr>
+		  </tr>
 	</div>
 	<?php
 	}
@@ -130,11 +122,11 @@ $result=mysqli_query($con,$query);
           	<a href="home1.html" class="btn btn-twitter-bg btn-lg twitter-sharrre btn-round" rel="tooltip" title="Tweet!">
               Back
             </a>
-            <a href="delete.php" class="btn btn-twitter-bg btn-lg twitter-sharrre btn-round" name="delete" rel="tooltip" title="Tweet!">
-              Delete
+            <a href="deleteTasks.php" class="btn btn-twitter-bg btn-lg twitter-sharrre btn-round" name="delete" rel="tooltip" title="Tweet!">
+              Delete Tasks
             </a>
             <a href="complete.php" class="btn btn-twitter-bg btn-lg twitter-sharrre btn-round" name="complete" rel="tooltip" title="Tweet!">
-              Complete
+              Complete Tasks
             </a>
             <a href="addtasks.php" class="btn btn-twitter-bg btn-lg twitter-sharrre btn-round" rel="tooltip" title="Tweet!">
               Add Tasks

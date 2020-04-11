@@ -2,7 +2,7 @@
 session_start();
 include_once('connection.php');
 $var=$_SESSION["username"];
-$query="select * from blog where username='{$var}' and status='Active'";
+$query="select * from blog where username='{$var}' and status='Deleted'";
 $result=mysqli_query($con,$query);
 ?>
 <!DOCTYPE html>
@@ -113,7 +113,7 @@ $result=mysqli_query($con,$query);
   <div class="row justify-content-md-center sharing-area text-center">
           
           <div class="text-center col-md-12 col-lg-8">
-            <a href="home1.html" class="btn btn-twitter-bg btn-lg twitter-sharrre btn-round" rel="tooltip" title="Tweet!">
+            <a href="viewblogs.php" class="btn btn-twitter-bg btn-lg twitter-sharrre btn-round" rel="tooltip" title="Tweet!">
               Back
             </a>
             <a href="deleteblog.php" class="btn btn-twitter-bg btn-lg twitter-sharrre btn-round" rel="tooltip" title="Tweet!">

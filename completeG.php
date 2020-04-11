@@ -9,12 +9,12 @@
 
 	$tid=$_POST['id'];
 
-	$sql="UPDATE task SET status='Deleted' WHERE id='{$tid}'";
+	$sql="UPDATE stgoals SET status='Completed' WHERE id='{$tid}'";
 	if(!mysqli_query($con,$sql)){
 		echo 'Not Deleted';
 	}
 	else{
-		header("Location: viewptasks.php");
+		header("Location: stgoals.php");
 	}
 	
 ?>

@@ -7,11 +7,11 @@
 		echo 'Database Not Selected';
 	}
 
-	$tid=$_POST['id'];
+	$id=$_POST['id'];
 
-	$sql="UPDATE task SET status='Deleted' WHERE id='{$tid}'";
+	$sql="UPDATE task SET status='Completed' where id='{$id}'";
 	if(!mysqli_query($con,$sql)){
-		echo 'Not Deleted';
+		echo 'Not Marked as Completed';
 	}
 	else{
 		header("Location: viewptasks.php");

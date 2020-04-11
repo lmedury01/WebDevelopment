@@ -108,13 +108,10 @@ The above copyright notice and this permission notice shall be included in all c
               <input type="password" class="form-control" name="pass" id="password" placeholder="Password">
             </div>
         </div>
-        <div class="text-center">
-              <button type="submit" class="btn btn-primary btn-round btn-lg" onclick="location.href='loginsuccess.html'">Login</button>
-           
-        </div>
         <br>
         <div class="text-center">
-            
+              <button type="submit" class="btn btn-primary btn-round btn-lg" onclick="location.href='loginsuccess.html'">Login</button>
+              &nbsp; &nbsp;
               <button type="button" class="btn btn-primary btn-round btn-lg" onclick="location.href='register.php'">Register</button>
            
         </div>

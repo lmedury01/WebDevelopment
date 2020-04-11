@@ -89,7 +89,7 @@ $result=mysqli_query($con,$query);
 								<th class="column1 text-center">ID</th>
 								<th class="column2 text-center">Task</th>
 								<th class="column3 text-center">Deadline</th>
-								<th class="column4 text-center">Username</th>
+								
 								
 							</tr>
 						</thead>
@@ -102,7 +102,7 @@ $result=mysqli_query($con,$query);
 			<td class="column1 text-center" style="font-weight:bold"><?php echo $rows['id'];  ?> </td>
 			<td class="column2 text-center" style="font-weight:bold"><?php echo $rows['note']; ?> </td>
 			<td class="column3 text-center" style="font-weight:bold"><?php echo $rows['deadline']; ?> </td>
-			<td class="column4 text-center" style="font-weight:bold"><?php echo $rows['username']; ?> </td>
+			
 		</tr>
 	</div>
 	<?php

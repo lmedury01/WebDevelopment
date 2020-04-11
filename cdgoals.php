@@ -2,7 +2,7 @@
 session_start();
 include_once('connection.php');
 $var=$_SESSION["username"];
-$query="select * from blog where username='{$var}' and status='Active'";
+$query="select * from stgoals where username='{$var}' and status!='Active'";
 $result=mysqli_query($con,$query);
 ?>
 <!DOCTYPE html>
@@ -61,10 +61,10 @@ $result=mysqli_query($con,$query);
         <ul class="navbar-nav">
           
           <li class="nav-item">
-            <a href="home1.html" class="nav-link"> Home</a>
+            <a href="home1.html" target="_blank" class="nav-link"> Home</a>
           </li>
           <li class="nav-item">
-            <a href="logout.html" class="nav-link"> Logout</a>
+            <a href="logout.html" target="_blank" class="nav-link"> Logout</a>
           </li>
         </ul>
       </div>
@@ -75,24 +75,30 @@ $result=mysqli_query($con,$query);
 		<div class="section section-buttons text-center">
       <div class="container">
         <div class="title">
-          <h1><strong>Blogs</strong></h1>
-          <h3><strong>View your Blogs here</strong></h3><br>
-          <a href="viewdblogs.php" class="btn btn-twitter-bg btn-lg twitter-sharrre " rel="tooltip">
-              View Deleted Blogs
+          <h1><strong>Goals</strong></h1>
+          <h3><strong>View your Short-term Goals here</strong></h3>
+          <br>
+          <a href="ltgoals.php" class="btn btn-twitter-bg btn-lg twitter-sharrre " rel="tooltip">
+              View Long-Term Goals
+            </a> &nbsp; &nbsp;
+            <a href="cdgoals.php" class="btn btn-twitter-bg btn-lg twitter-sharrre " rel="tooltip">
+              View Completed/Deleted Goals
             </a>
         </div>
     	</div>
+    	
+        <
 	</div>
+
 		
 			<!--<div class="wrap-table100">-->
 				
 					<table>
 						<thead>
 							<tr class="table100-head">
-							<th class="column1 text-center">ID</th>
-						    <th class="column2 text-center">Blog</th>
-								
-								
+								<th class="column1 text-center">ID</th>
+						    <th class="column2 text-center">Goals</th>
+								<th class="column2 text-center">Status</th>
 							</tr>
 						</thead>
 						
@@ -102,8 +108,8 @@ $result=mysqli_query($con,$query);
 	<div style="font-weight: bold">
 		<tr>
 			<td class="column1 text-center" style="font-weight:bold"><?php echo $rows['id'];  ?> </td>
-			<td class="column2 " style="font-weight:bold"><?php echo $rows['blogtext']; ?> </td>
-			
+			<td class="column2 text-center" style="font-weight:bold"><?php echo $rows['goal']; ?> </td>
+			<td class="column2 text-center" style="font-weight:bold"><?php echo $rows['status']; ?> </td>
 		</tr>
 	</div>
 	<?php
@@ -113,15 +119,10 @@ $result=mysqli_query($con,$query);
   <div class="row justify-content-md-center sharing-area text-center">
           
           <div class="text-center col-md-12 col-lg-8">
-            <a href="home1.html" class="btn btn-twitter-bg btn-lg twitter-sharrre btn-round" rel="tooltip" title="Tweet!">
+            <a href="stgoals.php" class="btn btn-twitter-bg btn-lg twitter-sharrre btn-round" rel="tooltip" title="Tweet!">
               Back
             </a>
-            <a href="deleteblog.php" class="btn btn-twitter-bg btn-lg twitter-sharrre btn-round" rel="tooltip" title="Tweet!">
-              Delete a blog
-            </a>
-            <a href="addblogs.php" class="btn btn-twitter-bg btn-lg twitter-sharrre btn-round" rel="tooltip" title="Tweet!">
-              Write a blog
-            </a>
+            
             
           </div>
         </div>

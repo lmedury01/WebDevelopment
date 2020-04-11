@@ -1,5 +1,7 @@
 <?php
+session_start();
 include_once('connection.php');
+$var=$_SESSION["username"];
 $query="select * from dchecklist";
 $result=mysqli_query($con,$query);
 ?>
@@ -74,7 +76,13 @@ $result=mysqli_query($con,$query);
       <div class="container">
         <div class="title">
           <h1><strong>Checklist</strong></h1>
-          <h3><strong>View your Daily Activities here</strong></h3>
+          <h3><strong>View your Daily Activities here</strong></h3><br>
+          <a href="weeklychecklist.php" class="btn btn-twitter-bg btn-lg twitter-sharrre " rel="tooltip">
+              View Weekly Checklist
+            </a> &nbsp; &nbsp;
+            <a href="monthlychecklist.php" class="btn btn-twitter-bg btn-lg twitter-sharrre " rel="tooltip">
+              View Monthly Checklist
+            </a> 
         </div>
     	</div>
 	</div>
