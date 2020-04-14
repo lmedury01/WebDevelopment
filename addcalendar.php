@@ -70,26 +70,34 @@ The above copyright notice and this permission notice shall be included in all c
     <div class="section section-buttons text-center">
       <div class="container">
         <div class="title">
-          <h1><strong>Add a DVD</strong></h1>
+          <h1><strong>Add an activity</strong></h1>
         </div>
         <div class="title">
-          <h3><b>Update your DVD catalogue</b></h3>
+          <h3><b>Update your calendar</b></h3>
         </div>
-        <form action="insertdvd.php" method="post">
+        <form action="insertcalendar.php" method="post">
         <div class="text-center">
             <br><br>
             <div class="form-group">
               <div class=col-xs-4>
-                <input type="text" class="form-control" id="ex3" name="name" placeholder="Name of the DVD">
+                <input type="text" class="form-control" id="ex3" name="month" placeholder="Month">
               </div><br>
-              
+               <div class=col-xs-4>
+                <input type="text" class="form-control" id="ex3" name="from" placeholder="Activity Starting Date">
+              </div><br>
+               <div class=col-xs-4>
+                <input type="text" class="form-control" id="ex3" name="to" placeholder="Activity Ending Date">
+              </div><br>
+               <div class=col-xs-4>
+                <input type="text" class="form-control" id="ex3" name="activity" placeholder="Activity">
+              </div><br>
             </div>
         </div>
        
     
   
         <div class="text-center">
-              <button type="submit" value="insert" class="btn btn-primary btn-round btn-lg" onclick="location.href='loginsuccess.html'">Add DVD</button>
+              <button type="submit" value="insert" class="btn btn-primary btn-round btn-lg" onclick="location.href='loginsuccess.html'">Add Activity</button>
            
         </div>
         </form>

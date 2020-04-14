@@ -82,16 +82,14 @@ The above copyright notice and this permission notice shall be included in all c
               <div class=col-xs-4>
                 <input type="text" class="form-control" id="ex3" name="activity" placeholder="Activity">
               </div><br>
-              <div class=col-xs-4>
-                <input type="text" class="form-control" id="ex3" name="username" placeholder="Username">
-              </div>
+              
             </div>
         </div>
        
     
   
         <div class="text-center">
-              <button type="submit" value="insert" class="btn btn-primary btn-round btn-lg" onclick="location.href='loginsuccess.html'">Add Goal</button>
+              <button type="submit" value="insert" class="btn btn-primary btn-round btn-lg" onclick="location.href='loginsuccess.html'">Add Activity</button>
            
         </div>
         </form>

@@ -83,8 +83,8 @@ The above copyright notice and this permission notice shall be included in all c
                 <input type="text" class="form-control" id="ex3" name="goal" placeholder="Goal">
               </div><br>
               <div class=col-xs-4>
-                <input type="text" class="form-control" id="ex3" name="username" placeholder="Username">
-              </div>
+                <input type="text" class="form-control" id="ex3" name="difficulty" placeholder="Difficulty">
+              </div><br>
             </div>
         </div>
        

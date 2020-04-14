@@ -92,7 +92,7 @@ $result=mysqli_query($con,$query);
 							<tr class="table100-head">
 								<th class="column1 text-center">ID</th>
 						    <th class="column2 text-center">Books</th>
-								<th class="column3 text-center">Username</th>
+								
 								
 							</tr>
 						</thead>
@@ -104,7 +104,7 @@ $result=mysqli_query($con,$query);
 		<tr>
 			<td class="column1 text-center" style="font-weight:bold"><?php echo $rows['id'];  ?> </td>
 			<td class="column2 text-center" style="font-weight:bold"><?php echo $rows['name']; ?> </td>
-			<td class="column3 text-center" style="font-weight:bold"><?php echo $rows['username']; ?> </td>
+			
 		</tr>
 	</div>
 	<?php

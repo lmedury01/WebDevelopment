@@ -76,10 +76,8 @@ $result=mysqli_query($con,$query);
       <div class="container">
         <div class="title">
           <h1><strong>Blogs</strong></h1>
-          <h3><strong>View your Blogs here</strong></h3><br>
-          <a href="viewdblogs.php" class="btn btn-twitter-bg btn-lg twitter-sharrre " rel="tooltip">
-              View Deleted Blogs
-            </a>
+          <h3><strong>View your Deleted Blogs here</strong></h3><br>
+          
         </div>
     	</div>
 	</div>
@@ -116,12 +114,7 @@ $result=mysqli_query($con,$query);
             <a href="viewblogs.php" class="btn btn-twitter-bg btn-lg twitter-sharrre btn-round" rel="tooltip" title="Tweet!">
               Back
             </a>
-            <a href="deleteblog.php" class="btn btn-twitter-bg btn-lg twitter-sharrre btn-round" rel="tooltip" title="Tweet!">
-              Delete a blog
-            </a>
-            <a href="addblogs.php" class="btn btn-twitter-bg btn-lg twitter-sharrre btn-round" rel="tooltip" title="Tweet!">
-              Write a blog
-            </a>
+            
             
           </div>
         </div>

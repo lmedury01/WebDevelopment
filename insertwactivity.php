@@ -1,4 +1,7 @@
 <?php
+	session_start();
+	include_once('connection.php');
+	$var=$_SESSION["username"];
 	$con=mysqli_connect('127.0.0.1','root','password');
 	if(!$con){
 		echo 'Not connected to server';
@@ -8,9 +11,9 @@
 	}
 
 	$activity=$_POST['activity'];
-	$username=$_POST['username'];
 	
-	$sql="INSERT INTO wchecklist(activity,username) values ('$activity','$username')";
+	
+	$sql="INSERT INTO wchecklist(activity,username) values ('$activity','$var')";
 	if(!mysqli_query($con,$sql)){
 		echo 'Not inserted';
 	}

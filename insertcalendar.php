@@ -10,16 +10,16 @@
 		echo 'Database Not Selected';
 	}
 
-	$goal=$_POST['goal'];
-	$difficulty=$_POST['difficulty'];
-	
-	
-	$sql="INSERT INTO ltgoals(goal,username,difficulty) values ('$goal','$var','$difficulty')";
+	$month=$_POST['month'];
+	$from=$_POST['from'];
+	$to=$_POST['to'];
+	$activity=$_POST['activity'];
+	$sql="INSERT INTO calendar values ('$month','$from', '$to','$activity','$var')";
 	if(!mysqli_query($con,$sql)){
 		echo 'Not inserted';
 	}
 	else{
-		header("Location: ltgoals.php");
+		header("Location: calendar.php");
 	}
 	
 ?>

@@ -1,4 +1,7 @@
 <?php
+	session_start();
+	include_once('connection.php');
+	$var=$_SESSION["username"];
 	$con=mysqli_connect('127.0.0.1','root','password');
 	if(!$con){
 		echo 'Not connected to server';
@@ -8,9 +11,8 @@
 	}
 
 	$book=$_POST['name'];
-	$username=$_POST['username'];
 	
-	$sql="INSERT INTO dvd(name,username) values ('$book','$username')";
+	$sql="INSERT INTO dvd(name,username) values ('$book','$var')";
 	if(!mysqli_query($con,$sql)){
 		echo 'Not inserted';
 	}

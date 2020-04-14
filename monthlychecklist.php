@@ -94,7 +94,7 @@ $result=mysqli_query($con,$query);
 							<tr class="table100-head">
 								<th class="column1 text-center">ID</th>
 						    <th class="column2 text-center">Activity</th>
-								<th class="column3 text-center">Username</th>
+								
 								
 							</tr>
 						</thead>
@@ -106,7 +106,7 @@ $result=mysqli_query($con,$query);
 		<tr>
 			<td class="column1 text-center" style="font-weight:bold"><?php echo $rows['id'];  ?> </td>
 			<td class="column2 text-center" style="font-weight:bold"><?php echo $rows['activity']; ?> </td>
-			<td class="column3 text-center" style="font-weight:bold"><?php echo $rows['username']; ?> </td>
+			
 		</tr>
 	</div>
 	<?php
@@ -116,7 +116,7 @@ $result=mysqli_query($con,$query);
   <div class="row justify-content-md-center sharing-area text-center">
           
           <div class="text-center col-md-12 col-lg-8">
-          	<a href="checklist.html" class="btn btn-twitter-bg btn-lg twitter-sharrre btn-round" rel="tooltip" title="Tweet!">
+          	<a href="home1.html" class="btn btn-twitter-bg btn-lg twitter-sharrre btn-round" rel="tooltip" title="Tweet!">
               Back
             </a>
             <a href="addmactivity.php" class="btn btn-twitter-bg btn-lg twitter-sharrre btn-round" rel="tooltip" title="Tweet!">

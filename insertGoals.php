@@ -1,4 +1,7 @@
 <?php
+	session_start();
+	include_once('connection.php');
+	$var=$_SESSION["username"];
 	$con=mysqli_connect('127.0.0.1','root','password');
 	if(!$con){
 		echo 'Not connected to server';
@@ -8,9 +11,9 @@
 	}
 
 	$goal=$_POST['goal'];
-	$username=$_POST['username'];
+	$difficulty=$_POST['difficulty'];
 	
-	$sql="INSERT INTO stgoals(goal,username) values ('$goal','$username')";
+	$sql="INSERT INTO stgoals(goal,username, difficulty) values ('$goal','$var', '$difficulty')";
 	if(!mysqli_query($con,$sql)){
 		echo 'Not inserted';
 	}

@@ -82,9 +82,7 @@ The above copyright notice and this permission notice shall be included in all c
               <div class=col-xs-4>
                 <input type="text" class="form-control" id="ex3" name="name" placeholder="Name of the book">
               </div><br>
-              <div class=col-xs-4>
-                <input type="text" class="form-control" id="ex3" name="username" placeholder="Username">
-              </div>
+              
             </div>
         </div>
        

@@ -2,7 +2,7 @@
 session_start();
 include_once('connection.php');
 $var=$_SESSION["username"];
-$query="select * from books";
+$query="select * from calendar where username='{$var}' order by datefrom";
 $result=mysqli_query($con,$query);
 ?>
 <!DOCTYPE html>
@@ -61,10 +61,10 @@ $result=mysqli_query($con,$query);
         <ul class="navbar-nav">
           
           <li class="nav-item">
-            <a href="home1.html" target="_blank" class="nav-link"> Home</a>
+            <a href="home1.html" class="nav-link"> Home</a>
           </li>
           <li class="nav-item">
-            <a href="logout.html" target="_blank" class="nav-link"> Logout</a>
+            <a href="logout.html" class="nav-link"> Logout</a>
           </li>
         </ul>
       </div>
@@ -75,12 +75,8 @@ $result=mysqli_query($con,$query);
 		<div class="section section-buttons text-center">
       <div class="container">
         <div class="title">
-          <h1><strong>Books</strong></h1>
-          <h3><strong>View your Books here</strong></h3>
-          </h3><br>
-          <a href="viewdvd.php" class="btn btn-twitter-bg btn-lg twitter-sharrre " rel="tooltip">
-              View DVD's
-            </a>
+          <h1><strong>Calendar</strong></h1>
+          <h3><strong>This is how your year looks like:</strong></h3>
         </div>
     	</div>
 	</div>
@@ -90,9 +86,10 @@ $result=mysqli_query($con,$query);
 					<table>
 						<thead>
 							<tr class="table100-head">
-								<th class="column1 text-center">ID</th>
-						    <th class="column2 text-center">Books</th>
-								
+								<th class="column1 text-center">Month</th>
+								<th class="column2 text-center">Start</th>
+								<th class="column3 text-center">Stop</th>
+								<th class="column3 text-center">Activity</th>
 							</tr>
 						</thead>
 						
@@ -101,24 +98,27 @@ $result=mysqli_query($con,$query);
 	?>
 	<div style="font-weight: bold">
 		<tr>
-			<td class="column1 text-center" style="font-weight:bold"><?php echo $rows['id'];  ?> </td>
-			<td class="column2 text-center" style="font-weight:bold"><?php echo $rows['name']; ?> </td>
-			
+			<td class="column1 text-center" style="font-weight:bold"><?php echo $rows['month'];  ?> </td>
+			<td class="column2 text-center" style="font-weight:bold"><?php echo $rows['datefrom']; ?> </td>
+			<td class="column3 text-center" style="font-weight:bold"><?php echo $rows['dateto']; ?> </td>
+			<td class="column3 text-center" style="font-weight:bold"><?php echo $rows['activity']; ?> </td>
 		</tr>
 	</div>
 	<?php
 	}
 	?>	
 	</table>
-  <div class="row justify-content-md-center sharing-area text-center">
+	<div class="row justify-content-md-center sharing-area text-center">
           
           <div class="text-center col-md-12 col-lg-8">
-          	<a href="home1.html" class="btn btn-twitter-bg btn-lg twitter-sharrre btn-round" rel="tooltip" title="Tweet!">
+          	<a href="viewptasks.php" class="btn btn-twitter-bg btn-lg twitter-sharrre btn-round" rel="tooltip" title="Tweet!">
               Back
             </a>
-            <a href="addbooks.php" class="btn btn-twitter-bg btn-lg twitter-sharrre btn-round" rel="tooltip" title="Tweet!">
-              Add a book
+            <a href="addcalendar.php" class="btn btn-twitter-bg btn-lg twitter-sharrre btn-round" rel="tooltip" title="Tweet!">
+              Add Activities
             </a>
+            <br>
+            
             
           </div>
         </div>
